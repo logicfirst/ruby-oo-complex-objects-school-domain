@@ -1,4 +1,4 @@
-# code here!
+require 'pry'
 class School
 
   attr_accessor :name, :roster
@@ -10,6 +10,7 @@ class School
   def add_student(student_name, grade)
     if @roster[grade]
       @roster[grade] << student_name
+      binding.pry
     else
       @roster[grade] = []
       @roster[grade] << student_name
